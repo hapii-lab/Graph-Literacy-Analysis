@@ -1,0 +1,1 @@
+This repository contains all files and notebooks used for the Graph Literacy Analysis study in the hapii lab at Cal Poly Pomona.
