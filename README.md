@@ -30,29 +30,24 @@ The study utilizes multiple eye-tracking data formats:
 ### 1. **Raw Fixations (2-column)**
 - **Features:** FPOGX, FPOGY (Fixation Point of Gaze X/Y)
 - **Format:** Raw gaze coordinates (0.0-1.0 normalized)
-- **Use cases:** Basic spatial attention patterns
 
 ### 2. **Raw Fixations (6-column)**
 - **Features:** FPOGX, FPOGY, LPS, RPS, LPMM, RPMM
-  - LPS/RPS: Left/Right Pupil Size
-  - LPMM/RPMM: Left/Right Pupil Millimeters
-- **Format:** Comprehensive fixation data with pupil measurements
-- **Use cases:** Advanced models (BERT, VTNet)
+  - LPS/RPS: Left/Right Screen Proximity (normalized)
+  - LPMM/RPMM: Left/Right Pupil Size
+- **Format:** Same as 2-column but with pupil measurements
 
 ### 3. **Raw Fixations (7-column)**
 - **Additional feature:** Fixation duration
 - **Format:** Temporal information added to 6-column data
-- **Use cases:** Time-aware modeling
 
 ### 4. **Descriptive Gaze Metrics (DGMs)**
-- **1-row DGMs:** Aggregated single-row representations
+- **1-row DGMs:** Single-row representations
 - **3-second tumbling DGMs:** Temporal sliding windows
 - **Format:** Image-based heatmap representations (32x32 or 64x64 pixels)
-- **Use cases:** CNN, image-based BERT
 
 ### 5. **Scanpaths**
-- **Format:** Sequential gaze transition patterns
-- **Use cases:** Graph-based or sequential models
+- **Format:** Sequential gaze transition patterns for VTNet
 
 ---
 
@@ -116,8 +111,6 @@ Transformer-based language models adapted for eye-tracking sequences.
   - Loss: Cross-entropy
 - **Evaluation:** Leave-One-User-Out (LOUO) cross-validation
 - **Metrics:** Accuracy, Precision, Recall, F1-score
-
-**Innovation:** Leverages pre-trained language understanding for behavioral pattern recognition.
 
 ---
 
