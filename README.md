@@ -129,7 +129,7 @@ Visual Transformer Networks for eye-tracking analysis.
 
 ---
 
-## 🔄 Cross-Validation Experiments (`LOUO CV/`)
+## Cross-Validation Experiments (`LOUO CV/`)
 
 **Leave-One-User-Out (LOUO) Validation:** Ensures user-independent generalization by training on N-1 users and testing on the held-out user.
 
